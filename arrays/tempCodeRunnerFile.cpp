@@ -1,8 +1,13 @@
-     // int arr[10];
-        // int size=sizeof(arr)/sizeof(arr[0]);
-        // for(int i=0;i<size;i++){
-        //     arr[i]=5;
-        // }
-        // for(int i=0;i<size;i++){
-        //     cout<<arr[i]<<endl;
-        // }
+ int last=n-1;
+//    while(right<last){
+//        if(arr[right]==1){
+//            right++;
+//        }
+//        if(arr[last]==1){
+//            swap(arr[right],arr[last]);
+
+//        }
+//        if(arr[last]!=1){
+//            last--;
+//        }
+//    }    

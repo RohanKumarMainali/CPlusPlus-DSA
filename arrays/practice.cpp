@@ -17,6 +17,16 @@
             return minimum;
         }
 
+        int sumArr(int array[],int size){
+            int sum=0; //if you don't intialize with zero it will get a garbage value
+            cout<<sum;
+            for(int i=0;i<size;i++){
+                sum+=array[i];
+            }
+            return sum;
+
+        }
+
     int main(){
 
         // int arr[10];
@@ -44,6 +54,9 @@
         }
         cout<<"The maximum number is: "<<Max(arr,size)<<endl;
         cout<<"The minimum number is: "<<Min(arr,size)<<endl;
+        cout<<"The sum fo all elements in array is: "<<sumArr(arr,size)<<endl;
+
+
 
 
     }
