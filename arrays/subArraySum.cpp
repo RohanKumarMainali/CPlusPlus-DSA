@@ -18,9 +18,11 @@ using std::vector;
 
         for(int i=left;i<=right;i++){
               if(currentSum<s){
-                  currentSum+=arr[i];
+                  cout<<"currentSum:  fjasldjflsakdf: "<<currentSum<<endl;
+                  currentSum+=arr[left];
                   cout<<currentSum<<endl;
                   right++;
+                  cout<<"rightItem :  "<<arr[right]<<endl;
               }
               if(currentSum>s){
                   cout<<"greater";
@@ -30,14 +32,15 @@ using std::vector;
                   cout<<"left index: "<<left<<endl;
               }
               if(currentSum==s){
-                   vec.push_back(left+1);
-                   vec.push_back(right+1);
-                   cout<<vec[0];
-                   cout<<vec[1];
-                   cout<<vec[2];
+                  cout<<"right index: "<<right<<endl;
+                  cout<<"checkingggggggggggggg"<<endl;
+
+                  vector<int> newVec;
+                   newVec.push_back(left+1);
+                   newVec.push_back(right+1);
 
 
-                   return vec;
+                   return newVec;
               }
 
 
@@ -46,9 +49,12 @@ using std::vector;
     }
 
     int main(){
-        int arr[5]={1,5,10,20,5};
+        int arr[10]={1,2,3,4,5,6,7,8,9,10};
+        vector<int> catching;
+        catching=subarraySum(arr,10,15);
+        cout<<"first: "<<catching[0];
+        cout<<"last: "<<catching[1];
 
-        subarraySum(arr,5,15);
       
 
     }
