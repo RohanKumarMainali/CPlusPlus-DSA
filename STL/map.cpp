@@ -1,5 +1,6 @@
 #include<iostream>
 #include<map>
+#include<unordered_map>
 using namespace std;
 
 int main(){
@@ -16,5 +17,20 @@ int main(){
     for(auto i:m){
         cout<<"id "<<i.first<<" : "<<i.second<<endl;
     }
-    cout<<"Finding the frequency: "<<m.count(1);
+    cout<<"Finding the frequency: "<<m.count(1)<<endl;
+
+    unordered_map <int,int> map;
+    map[1]=5;
+    map[2]=10;
+    map[3]=15;
+    
+    for(auto & rs: map){
+        cout<<" "<<rs.first << " "<<rs.second<<endl;
+    }
+    auto result=map.find(2);
+
+    if(result != map.end()){
+        cout<<"Found:  "<<result->first<<" "<<result->second<<endl;
+    }
+
 }
