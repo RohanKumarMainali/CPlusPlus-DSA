@@ -4,7 +4,8 @@ using namespace std;
 int main(){
 
     int arr[3]={0};
-    char ch[6]="rohan";  
+    char ch[6]="rohan"; 
+  
 
     // Behind The Scene : first temp memory = 'rohan\0'
             // ch[6]='rohan'
