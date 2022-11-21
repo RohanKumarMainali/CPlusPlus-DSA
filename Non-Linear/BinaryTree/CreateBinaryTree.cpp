@@ -36,6 +36,35 @@ void levelOrderTraversal(Node * root){
         }
     }
 }
+
+// differnet order travesel
+// inorder   LNR
+
+void inOrder(Node * root){
+    if(root == NULL) return;
+    inOrder(root->left);
+    cout<<root->data<<" ";
+    inOrder(root->right);
+}
+// pre Order : NLR
+
+void preOrder(Node * root){
+    if(root == NULL) return;
+    cout<<root->data<<" ";
+    inOrder(root->left);
+    inOrder(root->right);
+}
+
+// post Order : LRN
+
+void preOrder(Node * root){
+    if(root == NULL) return;
+    inOrder(root->left);
+    inOrder(root->right);
+    cout<<root->data<<" ";
+}
+
+
  
 Node* buildTree(Node * root){
     cout<< "Enter the data for node: "<<endl;
@@ -59,6 +88,8 @@ int main(){
     Node * root = NULL;
     root = buildTree(root);
     levelOrderTraversal(root);
+    cout<<"Pre order traversal "<<endl;
+    preOrder(root);
     return 0;
 
 }
