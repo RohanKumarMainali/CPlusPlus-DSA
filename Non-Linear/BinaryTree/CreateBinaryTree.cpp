@@ -2,6 +2,8 @@
 #include<queue>
 using namespace std;
 
+// creating binary Tree
+
 class Node{
     public: 
         int data;
@@ -16,17 +18,23 @@ class Node{
     }
 };
 
+// levelOrderTraversal (Breath First Search) : usage queue
+
 void levelOrderTraversal(Node * root){
 
     queue<Node *> q;
     q.push(root);
     q.push(NULL);
 
+    // using null as a seperator of level
     while(!q.empty()){
         Node * temp = q.front();
         q.pop();
+
+        // if temp == NULL old level is traversed
         if(temp==NULL) {
             cout<<endl;
+            // still more children left
             if(!q.empty()) q.push(NULL);
         }
         else{
@@ -51,16 +59,16 @@ void inOrder(Node * root){
 void preOrder(Node * root){
     if(root == NULL) return;
     cout<<root->data<<" ";
-    inOrder(root->left);
-    inOrder(root->right);
+    preOrder(root->left);
+    preOrder(root->right);
 }
 
 // post Order : LRN
 
-void preOrder(Node * root){
+void postOrder(Node * root){
     if(root == NULL) return;
-    inOrder(root->left);
-    inOrder(root->right);
+    postOrder(root->left);
+    postOrder(root->right);
     cout<<root->data<<" ";
 }
 
