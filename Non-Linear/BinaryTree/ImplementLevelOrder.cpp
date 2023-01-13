@@ -16,6 +16,7 @@ class Node{
     }
 };
 
+//BFS
 void levelOrderTraversal(Node * root){
 
     queue<Node *> q;
